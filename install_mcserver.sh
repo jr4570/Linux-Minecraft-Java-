@@ -22,7 +22,7 @@ BUILD_NUMBER=$(curl -s https://api.papermc.io/v2/projects/paper/versions/${LATES
 curl -o ${PAPER_JAR} -L https://api.papermc.io/v2/projects/paper/versions/${LATEST_BUILD}/builds/${BUILD_NUMBER}/downloads/paper-${LATEST_BUILD}-${BUILD_NUMBER}.jar
 
 # 初次啟動以生成必要檔案
-java -Xms1G -Xmx2G -jar ${PAPER_JAR} --nogui || true
+java -Xms4G -Xmx6G -jar ${PAPER_JAR} --nogui || true
 
 # 同意 EULA
 echo "eula=true" > eula.txt
